@@ -1,0 +1,1567 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0912.1023                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='88643099ad6a934a81624e59148c7f30af3ce318ba53ceab0f67d628c36ac4b3' _.fcp.WorkbookFingerprinting.true...creator-author-id='88643099ad6a934a81624e59148c7f30af3ce318ba53ceab0f67d628c36ac4b3' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='88643099ad6a934a81624e59148c7f30af3ce318ba53ceab0f67d628c36ac4b3' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='88643099ad6a934a81624e59148c7f30af3ce318ba53ceab0f67d628c36ac4b3' original-version='18.1' source-build='2026.2.3 (20262.26.0912.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Price Limit' datatype='integer' name='[Parameter 1044046488289286]' param-domain-type='range' role='measure' type='quantitative' value='150'>
+        <calculation class='tableau' formula='150' />
+        <range granularity='150' max='1000' min='0' />
+      </column>
+    </datasource>
+    <datasource caption='AirBnB_NYC (airbnb (1))' inline='true' name='federated.0z8lgos0k7mlo81cohout0aps5p9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='airbnb (1)' name='excel-direct.12s673u0c0vp9v1fx94nx16e75tr'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/ADMIN/Downloads/airbnb (1).xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Airbnb_listings' name='textscan.0qmv5nu1y4fb7a163d1uv10abxn5'>
+            <connection class='textscan' directory='C:/Users/ADMIN/Downloads' filename='Airbnb_listings.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0qmv5nu1y4fb7a163d1uv10abxn5' name='Airbnb_listings.csv' table='[Airbnb_listings#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='Host Id' ordinal='0' />
+              <column datatype='datetime' name='Host Since' ordinal='1' />
+              <column datatype='string' name='Name' ordinal='2' />
+              <column datatype='string' name='Neighbourhood ' ordinal='3' />
+              <column datatype='string' name='Property Type' ordinal='4' />
+              <column datatype='integer' name='Review Scores Rating (bin)' ordinal='5' />
+              <column datatype='string' name='Room Type' ordinal='6' />
+              <column datatype='integer' name='Zipcode' ordinal='7' />
+              <column datatype='integer' name='Beds' ordinal='8' />
+              <column datatype='integer' name='Number of Records' ordinal='9' />
+              <column datatype='integer' name='Number Of Reviews' ordinal='10' />
+              <column datatype='integer' name='Price' ordinal='11' />
+              <column datatype='integer' name='Review Scores Rating' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.12s673u0c0vp9v1fx94nx16e75tr' name='AirBnB_NYC' table='[AirBnB_NYC$]' type='table'>
+            <columns gridOrigin='A1:M10001:no:A1:M10001:0' header='yes' outcome='2'>
+              <column datatype='integer' name='Host Id' ordinal='0' />
+              <column datatype='date' name='Host Since' ordinal='1' />
+              <column datatype='string' name='Name' ordinal='2' />
+              <column datatype='string' name='Neighbourhood' ordinal='3' />
+              <column datatype='string' name='Property Type' ordinal='4' />
+              <column datatype='integer' name='Review Scores Rating (bin)' ordinal='5' />
+              <column datatype='string' name='Room Type' ordinal='6' />
+              <column datatype='integer' name='Zipcode' ordinal='7' />
+              <column datatype='integer' name='Beds' ordinal='8' />
+              <column datatype='integer' name='Number of Records' ordinal='9' />
+              <column datatype='integer' name='Number Of Reviews' ordinal='10' />
+              <column datatype='integer' name='Price' ordinal='11' />
+              <column datatype='integer' name='Review Scores Rating' ordinal='12' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Beds (AirBnB!NYC)]' value='[AirBnB_NYC].[Beds]' />
+          <map key='[Beds]' value='[Airbnb_listings.csv].[Beds]' />
+          <map key='[Host Id (AirBnB!NYC)]' value='[AirBnB_NYC].[Host Id]' />
+          <map key='[Host Id]' value='[Airbnb_listings.csv].[Host Id]' />
+          <map key='[Host Since (AirBnB!NYC)]' value='[AirBnB_NYC].[Host Since]' />
+          <map key='[Host Since]' value='[Airbnb_listings.csv].[Host Since]' />
+          <map key='[Name (AirBnB!NYC)]' value='[AirBnB_NYC].[Name]' />
+          <map key='[Name]' value='[Airbnb_listings.csv].[Name]' />
+          <map key='[Neighbourhood ]' value='[Airbnb_listings.csv].[Neighbourhood ]' />
+          <map key='[Neighbourhood]' value='[AirBnB_NYC].[Neighbourhood]' />
+          <map key='[Number Of Reviews (AirBnB!NYC)]' value='[AirBnB_NYC].[Number Of Reviews]' />
+          <map key='[Number Of Reviews]' value='[Airbnb_listings.csv].[Number Of Reviews]' />
+          <map key='[Number of Records (AirBnB!NYC)]' value='[AirBnB_NYC].[Number of Records]' />
+          <map key='[Number of Records]' value='[Airbnb_listings.csv].[Number of Records]' />
+          <map key='[Price (AirBnB!NYC)]' value='[AirBnB_NYC].[Price]' />
+          <map key='[Price]' value='[Airbnb_listings.csv].[Price]' />
+          <map key='[Property Type (AirBnB!NYC)]' value='[AirBnB_NYC].[Property Type]' />
+          <map key='[Property Type]' value='[Airbnb_listings.csv].[Property Type]' />
+          <map key='[Review Scores Rating (AirBnB!NYC)]' value='[AirBnB_NYC].[Review Scores Rating]' />
+          <map key='[Review Scores Rating (bin) (AirBnB!NYC)]' value='[AirBnB_NYC].[Review Scores Rating (bin)]' />
+          <map key='[Review Scores Rating (bin)]' value='[Airbnb_listings.csv].[Review Scores Rating (bin)]' />
+          <map key='[Review Scores Rating]' value='[Airbnb_listings.csv].[Review Scores Rating]' />
+          <map key='[Room Type (AirBnB!NYC)]' value='[AirBnB_NYC].[Room Type]' />
+          <map key='[Room Type]' value='[Airbnb_listings.csv].[Room Type]' />
+          <map key='[Zipcode (AirBnB!NYC)]' value='[AirBnB_NYC].[Zipcode]' />
+          <map key='[Zipcode]' value='[Airbnb_listings.csv].[Zipcode]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:M10001:no:A1:M10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Host Id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Host Id]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Host Id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Host Since</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Host Since]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Host Since</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Neighbourhood </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Neighbourhood ]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Neighbourhood </remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Property Type]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Property Type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Scores Rating (bin)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Review Scores Rating (bin)]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Review Scores Rating (bin)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Room Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Room Type]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Room Type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Zipcode]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Zipcode</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Beds]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Beds</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Records]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number Of Reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number Of Reviews]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Number Of Reviews</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Price</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Scores Rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Review Scores Rating]</local-name>
+            <parent-name>[Airbnb_listings.csv]</parent-name>
+            <remote-alias>Review Scores Rating</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Host Id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Host Id (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Host Id</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Host Since</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Host Since (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Host Since</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Neighbourhood</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Neighbourhood]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Neighbourhood</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Property Type (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Property Type</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Scores Rating (bin)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Review Scores Rating (bin) (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Review Scores Rating (bin)</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Room Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Room Type (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Room Type</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Zipcode (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Zipcode</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Beds (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Beds</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Records (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number Of Reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number Of Reviews (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Number Of Reviews</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Price</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Scores Rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Review Scores Rating (AirBnB!NYC)]</local-name>
+            <parent-name>[AirBnB_NYC]</parent-name>
+            <remote-alias>Review Scores Rating</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Review Performance Score' datatype='integer' name='[Calculation_1044046482956288]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Number Of Reviews]*[Review Scores Rating]' />
+      </column>
+      <column caption='Price Category' datatype='string' name='[Calculation_1044046483517441]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Price]&gt;=300 then &quot;Luxury&quot;&#13;&#10;ELSEIF [Price] &gt;=150 THEN &quot;Standared&quot;&#13;&#10;ELSE &quot;Budget&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Review Category' datatype='string' name='[Calculation_1044046484267010]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Number Of Reviews]&gt;=100 THEN &quot;Highly Reviewed&quot;&#13;&#10;ELSE &quot;Less Reiviewed&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Host Status' datatype='string' name='[Calculation_1044046484860931]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Host Since]&lt;=TODAY() THEN &quot;Active Host&quot;&#13;&#10;ELSE &quot;New Host&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Price Filter Category' datatype='string' name='[Calculation_1044046488498183]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Price] &gt; [Parameters].[Parameter 1044046488289286] THEN &quot;Above Limit&quot;&#13;&#10;ELSE &quot;Below Limit&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Host_Since' datatype='date' name='[Calculation_1044046495911944]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IFNULL([Host Since (AirBnB!NYC)],DATE(&quot;01-01-2010&quot;))' />
+      </column>
+      <column caption='Review Score Rating (bin)1' datatype='string' name='[Calculation_1044046497570826]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IFNULL(STR([Review Scores Rating (AirBnB!NYC)]),&quot;Not Reated&quot;)' />
+      </column>
+      <column caption='Review Score Rating (bin)' datatype='real' name='[Calculation_1044046499844108]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IFNULL([Review Scores Rating],90.74)' />
+      </column>
+      <column datatype='integer' name='[Host Id (AirBnB!NYC)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Host Id]' role='dimension' type='ordinal' />
+      <column datatype='date' hidden='true' name='[Host Since (AirBnB!NYC)]' role='dimension' type='ordinal' />
+      <column caption='Neighbourhood' datatype='string' name='[Neighbourhood ]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood1' datatype='string' name='[Neighbourhood]' role='dimension' type='nominal' />
+      <column datatype='integer' hidden='true' name='[Review Scores Rating (bin) (AirBnB!NYC)]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Room Type (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Room Type]' new-bin='true'>
+          <bin default-name='false' value='&quot;Budget Stay&quot;'>
+            <value>&quot;Entire home/apt&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Primium Stay&quot;'>
+            <value>&quot;Private room&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Shared Accomodation&quot;'>
+            <value>&quot;Shared room&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Room Type]' role='dimension' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Zipcode (AirBnB!NYC)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='AirBnB_NYC' datatype='table' name='[__tableau_internal_object_id__].[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]' role='measure' type='quantitative' />
+      <column caption='Airbnb_listings.csv' datatype='table' name='[__tableau_internal_object_id__].[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1044046488498183]' derivation='None' name='[none:Calculation_1044046488498183:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='Location Structure'>
+          <field>[Zipcode]</field>
+          <field>[Neighbourhood ]</field>
+        </drill-path>
+      </drill-paths>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ADMIN/AppData/Local/Temp/TableauTemp/#TableauTemp_0q1weh20jixezd11iup1016i61te.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/27/2026 07:07:58 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651' table='[Extract].[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]' type='table' />
+            <relation name='AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649' table='[Extract].[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Beds (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Beds]' />
+            <map key='[Beds]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Beds]' />
+            <map key='[Host Id (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Host Id]' />
+            <map key='[Host Id]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Host Id]' />
+            <map key='[Host Since (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Host Since]' />
+            <map key='[Host Since]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Host Since]' />
+            <map key='[Name (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Name]' />
+            <map key='[Name]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Name]' />
+            <map key='[Neighbourhood ]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Neighbourhood ]' />
+            <map key='[Neighbourhood]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Neighbourhood]' />
+            <map key='[Number Of Reviews (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Number Of Reviews]' />
+            <map key='[Number Of Reviews]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Number Of Reviews]' />
+            <map key='[Number of Records (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Number of Records]' />
+            <map key='[Number of Records]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Number of Records]' />
+            <map key='[Price (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Price]' />
+            <map key='[Price]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Price]' />
+            <map key='[Property Type (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Property Type]' />
+            <map key='[Property Type]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Property Type]' />
+            <map key='[Review Scores Rating (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Review Scores Rating]' />
+            <map key='[Review Scores Rating (bin)]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Review Scores Rating (bin)]' />
+            <map key='[Review Scores Rating]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Review Scores Rating]' />
+            <map key='[Room Type (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Room Type]' />
+            <map key='[Room Type]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Room Type]' />
+            <map key='[Zipcode (AirBnB!NYC)]' value='[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649].[Zipcode]' />
+            <map key='[Zipcode]' value='[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651].[Zipcode]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Host Id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Host Id]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Host Id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Host Since</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Host Since]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Host Since</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>97</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Neighbourhood </remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Neighbourhood ]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Neighbourhood </remote-alias>
+              <ordinal>3</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Property Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Property Type]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Property Type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Review Scores Rating (bin)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Review Scores Rating (bin)]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Review Scores Rating (bin)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Room Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Room Type]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Room Type</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Zipcode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Zipcode]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Zipcode</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Beds</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Beds]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Beds</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number Of Reviews</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number Of Reviews]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Number Of Reviews</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Price</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Review Scores Rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Review Scores Rating]</local-name>
+              <parent-name>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</parent-name>
+              <remote-alias>Review Scores Rating</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Airbnb_listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Host Id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Host Id (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Host Id</remote-alias>
+              <ordinal>13</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18838</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Host Since</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Host Since (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Host Since</remote-alias>
+              <ordinal>14</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3557</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>15</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24674</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Neighbourhood</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Neighbourhood]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Neighbourhood</remote-alias>
+              <ordinal>16</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Property Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Property Type (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Property Type</remote-alias>
+              <ordinal>17</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Room Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Room Type (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Room Type</remote-alias>
+              <ordinal>18</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Zipcode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Zipcode (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Zipcode</remote-alias>
+              <ordinal>19</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>240</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Beds</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Beds (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Beds</remote-alias>
+              <ordinal>20</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of Records (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>21</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number Of Reviews</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number Of Reviews (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Number Of Reviews</remote-alias>
+              <ordinal>22</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>215</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Price</remote-alias>
+              <ordinal>23</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>463</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Review Scores Rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Review Scores Rating (AirBnB!NYC)]</local-name>
+              <parent-name>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</parent-name>
+              <remote-alias>Review Scores Rating</remote-alias>
+              <ordinal>24</ordinal>
+              <family>AirBnB_NYC</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_1044046488498183:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Above Limit&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Below Limit&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Price Limit' datatype='integer' name='[Parameter 1044046488289286]' param-domain-type='range' role='measure' type='quantitative' value='150'>
+          <calculation class='tableau' formula='150' />
+          <range granularity='150' max='1000' min='0' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='AirBnB_NYC' id='AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649'>
+            <properties context=''>
+              <relation connection='excel-direct.12s673u0c0vp9v1fx94nx16e75tr' name='AirBnB_NYC' table='[AirBnB_NYC$]' type='table'>
+                <columns gridOrigin='A1:M10001:no:A1:M10001:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Host Id' ordinal='0' />
+                  <column datatype='date' name='Host Since' ordinal='1' />
+                  <column datatype='string' name='Name' ordinal='2' />
+                  <column datatype='string' name='Neighbourhood' ordinal='3' />
+                  <column datatype='string' name='Property Type' ordinal='4' />
+                  <column datatype='integer' name='Review Scores Rating (bin)' ordinal='5' />
+                  <column datatype='string' name='Room Type' ordinal='6' />
+                  <column datatype='integer' name='Zipcode' ordinal='7' />
+                  <column datatype='integer' name='Beds' ordinal='8' />
+                  <column datatype='integer' name='Number of Records' ordinal='9' />
+                  <column datatype='integer' name='Number Of Reviews' ordinal='10' />
+                  <column datatype='integer' name='Price' ordinal='11' />
+                  <column datatype='integer' name='Review Scores Rating' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649' table='[Extract].[AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649]' type='table' />
+            </properties>
+          </object>
+          <object caption='Airbnb_listings.csv' id='Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651'>
+            <properties context=''>
+              <relation connection='textscan.0qmv5nu1y4fb7a163d1uv10abxn5' name='Airbnb_listings.csv' table='[Airbnb_listings#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Host Id' ordinal='0' />
+                  <column datatype='datetime' name='Host Since' ordinal='1' />
+                  <column datatype='string' name='Name' ordinal='2' />
+                  <column datatype='string' name='Neighbourhood ' ordinal='3' />
+                  <column datatype='string' name='Property Type' ordinal='4' />
+                  <column datatype='integer' name='Review Scores Rating (bin)' ordinal='5' />
+                  <column datatype='string' name='Room Type' ordinal='6' />
+                  <column datatype='integer' name='Zipcode' ordinal='7' />
+                  <column datatype='integer' name='Beds' ordinal='8' />
+                  <column datatype='integer' name='Number of Records' ordinal='9' />
+                  <column datatype='integer' name='Number Of Reviews' ordinal='10' />
+                  <column datatype='integer' name='Price' ordinal='11' />
+                  <column datatype='integer' name='Review Scores Rating' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651' table='[Extract].[Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Host Id]' />
+              <expression op='[Host Id (AirBnB!NYC)]' />
+            </expression>
+            <first-end-point object-id='Airbnb_listings.csv_B2FE08CF5A3F4346948C8EDA8076F651' />
+            <second-end-point object-id='AirBnB!NYC_D3D8F84E94C045168DAF4F19A88F3649' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirBnB_NYC (airbnb (1))' name='federated.0z8lgos0k7mlo81cohout0aps5p9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z8lgos0k7mlo81cohout0aps5p9'>
+            <column datatype='integer' name='[Price]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Room Type (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Room Type]' new-bin='true'>
+                <bin default-name='false' value='&quot;Budget Stay&quot;'>
+                  <value>&quot;Entire home/apt&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Primium Stay&quot;'>
+                  <value>&quot;Private room&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Shared Accomodation&quot;'>
+                  <value>&quot;Shared room&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Room Type]' role='dimension' type='nominal' />
+            <column-instance column='[Price]' derivation='Sum' name='[sum:Price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0z8lgos0k7mlo81cohout0aps5p9].[sum:Price:qk]' field-type='quantitative' max='12764' min='-2317' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0z8lgos0k7mlo81cohout0aps5p9].[sum:Price:qk]</rows>
+        <cols>[federated.0z8lgos0k7mlo81cohout0aps5p9].[Room Type (group)]</cols>
+      </table>
+      <simple-id uuid='{48F4B704-97E9-4E12-A90D-7C1B9520D514}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirBnB_NYC (airbnb (1))' name='federated.0z8lgos0k7mlo81cohout0aps5p9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z8lgos0k7mlo81cohout0aps5p9'>
+            <column datatype='integer' name='[Price]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Room Type]' role='dimension' type='nominal' />
+            <column-instance column='[Room Type]' derivation='None' name='[none:Room Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Price]' derivation='Sum' name='[sum:Price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0z8lgos0k7mlo81cohout0aps5p9].[sum:Price:qk]</rows>
+        <cols>[federated.0z8lgos0k7mlo81cohout0aps5p9].[none:Room Type:nk]</cols>
+      </table>
+      <simple-id uuid='{26AAD3F3-4594-4C8F-A1B0-5D20E934C935}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='684' maxwidth='1255' minheight='584' minwidth='1155' sizing-mode='range' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Price Limit' datatype='integer' name='[Parameter 1044046488289286]' param-domain-type='range' role='measure' type='quantitative' value='150'>
+          <calculation class='tableau' formula='150' />
+          <range granularity='150' max='1000' min='0' />
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97260' id='7' param='horz' type-v2='layout-flow' w='98614' x='693' y='1370'>
+            <zone fixed-size='570' h='97260' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+              <zone fixed-size='24' h='5480' id='8' is-fixed='true' mode='slider' param='[Parameters].[Parameter 1044046488289286]' type-v2='paramctrl' w='98614' x='693' y='1370'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='45890' id='14' name='Sheet 1' w='98614' x='693' y='6850'>
+                <layout-cache minheight='203' type-h='scalable' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='45890' id='15' name='Sheet 2' w='98614' x='693' y='52740'>
+                <layout-cache minheight='203' type-h='scalable' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97260' id='16' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+                <zone fixed-size='24' h='5480' id='8' mode='slider' param='[Parameters].[Parameter 1044046488289286]' type-v2='paramctrl' w='98614' x='693' y='1370'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45890' id='14' is-fixed='true' name='Sheet 1' w='98614' x='693' y='6850'>
+                  <layout-cache minheight='203' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45890' id='15' is-fixed='true' name='Sheet 2' w='98614' x='693' y='52740'>
+                  <layout-cache minheight='203' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F13E0C7A-E51E-428C-AFD3-695ED3B505A2}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1044046488289286]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0z8lgos0k7mlo81cohout0aps5p9].[Room Type (group)]</field>
+            <field>[federated.0z8lgos0k7mlo81cohout0aps5p9].[yr:Host Since:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E5A02AF8-2374-494C-85A0-A8C93E61D8DE}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='15' />
+      <simple-id uuid='{868F8529-D1B3-46A3-B1F1-C74E6846D369}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0z8lgos0k7mlo81cohout0aps5p9].[none:Room Type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3483DE70-F932-41D4-8E9E-D776E77D9D25}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAATB0lEQVR4nO3dd3Cb533A8e/7YpEESHDvKZIiNShLsoYtW07kyFUayXE85CZt6rZx46aX
+      1HfuuOsfudz10qS5a52Lr+OSuyZNz40vjmfseGjY8nZk7S2K1KBIggRJDAIEQADv6B+SSMly
+      EoekSUrP7/OPBBB83gfS+30HCPDVbNu2EUJBmqZp+lxPQoi5JAEIpUkAQmkSgFCaBCCUJgEI
+      pUkAQmkSgFCaBCCUJgGIqxjhM2zf9T6BaHpWlpca3MszT77NsDEri7uCc/YXeT1K0PnOdra9
+      fYpsTgH1izro6FhKc6Ufl0Ob4WUlOb7tOV490k86ncV2OPG43dx8/yOsq53+6FY6wq937WI4
+      bzX+fPf0B/wYPEULKeOnvPpmBVs3tJKjz/S/2W8me4AZkWWou4tAwkNdfTnhg7/iP3/yC7pD
+      49i2xfhYmIH+QcJjmclvscYJBwMMDkUZN6wLd5lZMpk08cgIwZE4ppkhFh4iGI5jWJfesuUg
+      v7yO1oYq0iN9hCikqaWFYo9BJmtg2YBtYxoZsoaBkc2QyaSJDg+STKYAsM0ssVCQwGCI1MVl
+      XxIbPMnxc2k6Vi/G69CwLYNEdISh0CiZbAbDsrGMLFnDwsykiMeSGICZihLoDxCKpzBtsG0b
+      I5vBvDhvM5vBsC4+x6xBIhIkGBolbdjoHh/tS5cweuJ9zoUyzOab02QPMGM81C9bx5a7VmGe
+      r+bRx3cxNJqgxjjO87/YQZgcskYOG/7kQVaVjbH/lefZ2RkjxwGFbevYsuFGssd+yU/f6KMg
+      30EkEMNfXYqWSRKKONjwF1/h1jof4KFuxW3ULQxiRYIMtWxgy+2tZIa62bntJG1r76CxwOTA
+      O6+Qqb+J/M7tvNZj4dUSNKy8hfWrVhLc+wKvHo7h0xLEK9fz4J03cGlbH+rex6D3BhpLnNiW
+      xcld/8tL+yP4CvLJZtKsvudrVAV2cNSowX1sF2e9a/n8xgJ2PbmNfsuDTi4r79jMTU357H/9
+      GXI67mNlXR4n33ic8Y4HqQ3u4Ll3unF5PEQjMarX3MUXbmmlpLoBr3mCcwMhFpZVM1v7ANkD
+      zBibTCpBJDTE4b3vELUKKPF5Of7605zLX8WWu7/AhuogP3t2D/2n9/D84RjrNn2Ozevb6T/w
+      Hof7w8T6OunJ1nDrpi0scR/hrGcZmzZ/hmbjGAdOJ3/r0j1OjaFTJzlwNkgy1cPeNw6QdjoJ
+      HHqLROXN3LF5M73ZIoZHz7Lr+Q+ouHEjGzfdQHzbs+wdnhwnMtiHv3UB+RpYxkm2PXWc+vV3
+      8bnPrkHvfo8zEYPQ2cO8+MP/YH/ucm5fX0fPa69w0rWIe+/azOrKJG+8vZtoPMnpI+/SE76w
+      1wsce4ueKMR6D3MkUcztd/whty8pYvfu3YQTGRwFfmpcBoGBKB/aKX2iJIAZE2fPU//O333j
+      IR57PcvWP/8zFlfqBHr6aFt1K80NjXTcfAOOwyc4GThPbnULS1uaWbConUbbZDAax9Kd5JfW
+      0NjYRGWxG39lE80LGqgqdmEav+3AQMNZVMWK5lxO7DtG34G3CRRvZHmjB4Ci6iYaG5oZHrUZ
+      C3fR1WURH+nk6Kk4vuIQI5HJkUaGB8nxeNAAe+g0vdl2Vq5pob6hltJcx8TjCtds5etbP0Vz
+      pU5/t4NFqzpoamjkhiXNRKIhxtPZ3zhbd1E1TQ113NCxiNxEnGA6Aw4dp2aSGZ/dM2EJYMYU
+      cMsD/8hj3/t71paPc/p0L4mMiwJ/HkMDg2Rti8TIENnSUiry/STDIWJZA2M8SUwHn8c9rd2+
+      pnlpWbYUo/cgL79+iMbbVlB02YC2maSi2EVOfgUF3jFsVwk1NU186r4HWFY6+bjyyloSqRQ2
+      oHnLyDO7OH60h/5zZ+iLTq7UhUWFuHQdzZlLUWGGQCCKZZuMxWPkuHNxOhxc+qSJlY4RH/9Q
+      wLbJyNAgZk4ehS4XGCZpy0Wez402e+fAcg4w03x1N/HFu0d5/JmneSHvT1m36tO8+dQPefRQ
+      IYnhOOseuJvW+iiL33yCH/3g+xTYKTJVK9hUV0r27PSW7a3r4JayF/nx6Ra+u7gQuLBp3/PU
+      o0R2ZmlfdwflxSu5eUMZL25/geGSHCyPn41b19B4cYziuiYyh84S+0wdBf6lfHbTu2x/+nF6
+      mqqJGRZVVy21gI71i3jj50/wvRPFpOJJOjZspTDfg09P89JP/pWjtQ04QwZtF78jvP9Zvvsv
+      7xEPJ2n69L1U+NwYo1H6bSdNlUXM+Atnv4UmnwibCSaJSJS0nkdhQS6aOU4kFMHIKaQ412Lk
+      4qsjzvwyGhqqyNFMktER+gNB0loupdU1lPnzMOIjRMw8yorySIf7SLgqKcvXSISGGPeUUeK7
+      bHtlGcSiUUx3PoU+D9gWlpnhxDPf4QnzXr79x8txEGHbdx5h/6J/4O52nbLqGor9+WQSYQYH
+      hkkYkOvzU15Zhdd1YdhY4CBPP7mTjvsfZlW1TjIaJRIbw3YO8tS3nmTptx9lvTfEmO2lxJ+H
+      roFtpAgNDTAwnMCVX0JtdTlet0Zs+Dzng2N48kvw55rkFtUR3PE9Huts5OHNHeAppqKylIIc
+      nYHD23nu3RE2ffFLNBc7Z+UkWNM0TfYAM8KBt6gE76WbzhyKKya3lZVNrVR+6PF5RRW0FlVc
+      eW9B6cTj8oprybv4d29J1eTYl+hOCoonj12yYyPs3vEkLx+u44/+thXHxeX4ympoXNBM++Kc
+      icd6fCU0tJZ85DMpKG9hZftJDuzZR/OmJnb+6AeccVdgjPRi3HwP66p1cikj97Lv0Zy5lFYv
+      oLT6yrH8FU10XPkUieSXUlffxML2JRP3GYkB9u89RfXa+2mapZX/EtkDXCes7DjhoSFMXyll
+      BRe2zGAQCw6Q8dVQ6v34p3vZ0X4OnI6wYOFC8rUkw8PDZByF1FSX4HFM77QxHRtiJJtLTUn+
+      xH2Z2Gn27EuweP0yimZxk6xpmiYBCGVdlx+KN00Tw5iDN5WIa9J1F4Bt28hOTXxc110AQvw+
+      JAChNAlAKE0CEEqTAITSJAChNAlAKE0CEEqTAITSJAChNAlAKE0CEEqTAITSlPlE2HjG4G8e
+      e2WupzHhr+9axcqFV3/CVswuZQKwbZuhSGKupzEhnZHPLMwHcggklCYBCKVJAEJpEoBQmgQg
+      lCYBCKVJAEJpEoBQ2pwHYCYGOHV+dOK2bVuM9h/jzddeZ29XkKxlA2mGh0OkUhd+PbeVDHO2
+      d5Dx7CxeSUFcl+YsADub4MzuV3lyx072HR2auD8b7+K9vSPUtrXh6dnNB30JbFL09ASIxzPY
+      Zopz3d2MjGbRZ/P3aIvr0pwFYGZMfM2ruffOtXgvuyZO5MgRvGvW01xbQ8e6VgL7u8liY5om
+      tm0T7u2kJ2TQ2FKLexavJiiuT3P2XiCnt4ByL0DosnttQsM6FWsvdplXQVlyL2EaIBXhbPdR
+      xkbD1K7eSFnOhZXfsixM05wYwbKsj/z1iJl59t4bwzTIZDK/+4HiEzX/3gynOXFOzEpDMzJc
+      ujCPbaeIhkxa8yanrWka2mXX1Ln0d+1D19nR59neQkO7ao5i9s2zADQ8OQlCIYsFJTpkw0Qd
+      RRQAgZxCGhsW0FB2gq6DpyhZuxCvU0fTNJyTxWAYBrZt43K5rhh5Nq88+HE4HI6r5ihm39yd
+      A6SThIL99PePEIuN0N8/SDSZpnpxA+f3HqS3v5+uvSfxLGvHD6Bp6LqDqqYllDn72Xe0l/R8
+      W6vFNWfuAjDSjIaHGBrSqa11MDQUZmw8i6t6BctLEwT6+wnSwNqFfiCHmpoKvF43mttHS9si
+      Sr1MXIVciKmas0Mgt7eIBYuKPvJrzStvodG00HTHxWN3J7W1k1elchdWs6RwliYqrmvz7Bzg
+      Ak3TcTrn/Gd0QgGylgmlSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoE
+      IJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBC
+      aRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQm
+      AQilSQBCaRKAUJoEIJQmAQilSQBCafMuANsyCPd1cnD/fo6eCZIxbSBDOBxlfNwAwEpF6R0Y
+      IZ215nay4po37wJI9e7m3a40hWVl5ESP8NrBQSDFuXN9xOMZsNL0nTnN4EgCdG2upyuucfMu
+      gMDJbooWttNQW0vT4mqSJ84TxyKbNbAsi9GBM5wdTFC7oBa3BCCmyTnXE/iwmqVLON11iCPD
+      bjKJICU33kg+QDpGoLeb2PB5ipdvosrrAMC2bUzTnPh+y7KwrKsPjbJZY5aewcdjmCbZbHau
+      p6G8eReAaWi4nAapVApD8+DOpjHJBTNDPBYkGHLRXOiaeLxt29i2fcXty/+cuJ8rb889+6o5
+      itk3zwJIcOrXPZRt+TxLvU7sTIT3X/yA4LI1kFtMS30j9aVHOXP4HKVrFpCjga7r6PrkkZxh
+      GNi2jcvlumJk055fh0tOhxO32z3X01DePDsHcJPnNwj3DzMSGmFkpJeo7ScPQNNxONw0tN1A
+      oXmavcf6L75CJMTUzbM9gIvW224j+u5hjg66MdPQtuFmCjEpLy8hN9eF5vHS1r6QY4EkacPC
+      7XDM9aTFNWyeBQCOvErWfqYc0zDA6cRx8fCmqSlv4jGe4gZWFs/VDMX1ZN4FAKDpOk45Phaz
+      YJ6dAwgxuyQAoTQJQChNAhBKkwCE0iQAoTQJQChNAhBKkwCE0iQAoTQJQChNAhBKkwCE0iQA
+      oTQJQChNAhBKkwCE0iQAoTQJQChNAhBKkwCE0iQAoTQJQChNAhBKkwCE0iQAoTQJQChNAhBK
+      kwCE0iQAoTQJQChNAhBKkwCE0iQAoTQJQChNAhBKkwCE0iQAoTQJQChNAhBKkwCE0iQAoTQJ
+      QChNAhBKkwCE0iQAoTQJQCjNOdcTuIptMx4b4NiBIwTTeSxctYqWEp1gME5+vp+8PBdmIsS5
+      kQzVVRXkuqVhMXXzbu0x0gO8v3MPzqbl3LSqFZ8GkKK3N8DYWAbbSHK2q5towsTh1OZ6uuIa
+      N+/2AGOdexhfvJGO2hxsTUfXNWAc07SwbZvQ+U56o9BxUw1uXQIQ0zPvAhjsCTJWeJg9cSdm
+      OkNJ2wrayoFkmO7OgyTiYzSuvZ3SnAsrv2VZmKY58f2WdSEUy7KuGDeTMWbzafxOWcMgnU7P
+      9TSUN+8CsCwvZdVllDtdWOkhTr17iNK720HXcTkt4qE07tzJaWuahqZpV9wG0PUrj+4+fHuu
+      6bo+7+akohkIwMbKpIiOjmE5POR7PSTTFv78XHTt9z9E8RXqjOQ00FjrQrOrGT2+jQSAx09d
+      QzMNFZ2c2H+C4rXt5LsdaJqG0zn5NAzDwLZtXC7XFeMaV+4Q5pxD16+ao5h90w7AToXYs/1Z
+      fvX2MeKeUu7fegfbn+vkoW8+QPUU/n8rFy/mwAcfcNqsx5kdYshTRQswoGnouk55XTvh0B72
+      HfNyU0c9uU7Zioqpm/bak+rbx8snde576GE2Ly9CK21iWeoMx2P2lMZzlS5hzcJcYqEQobBF
+      8+rFFJBLXV0VPp8bze2juW0xVQUOrHm2VRfXnmnvAXTLJuXyUuTzENLAjgU5G3WwLmdq42m6
+      k6rWFZRbJmg6unah0erqyQHd/kra/dOduRAzEICneS33Vf033/nWP5FKxbFeOErjHzzA6rxp
+      vESpaTgc8+78XFyHpr2WaQ4/K+59mH+7PcD5kTTe4lLKivzz7ydsQnyE6a+nkS6e2bEPw1/H
+      kiXtNJaM884TO+mV43NxDZh2APFAJwfOBeHiOa/tdBLvfJeToamdBAsxm6Z9CJRf2UB54Je8
+      sreJGytyGT//Hm8lq3mkVN6mIOa/6Z9pli7hy1v7+dnLv+T/UibOHD+3fXkrjbL+i2vAlAOw
+      LZPQ4Hn0HD/j+QvYsLGASDyL21dAgdciAfhmcKJCfBKmHICZSfH+Sz/G3bqJrvdf4mhP9LKv
+      LuGR//oGbbIXEPPclANw5vi486v/DFaKZbVlfL6kifoiz0zOTYhP3PRfBjUSnDvwGk/+/FW6
+      RsZIJpMkk+OYtrwKJOa/6Z8ERwMc7O7irdd+xaGDOyj26MAiHv7B12iRQyAxz00/gOI2vvRX
+      3+TeBy//yZebQln5xTVgGgHYmJkEgXOnGQinyC1ppLW5khx5D4S4hkw9AMskcGg7jz+/H83v
+      I5OE5fd8hS3LynHM4ASF+CRNeXttGRlOHNmPs2MLf/nVh7h7dR4HXj1AZCZnJ8QnbMoB2LYN
+      aNTU15Hn9lDc0kxhKEQ0kSCRkFeBxLVhyodAmgZWMsKebT8nst/D+Fgvp/rSjP9PGB/1fOHr
+      d1I7kzMV4hMw9QAcbhbfeg9GX/LiPY20L7301TKm+IEwIWbVNAJwUb/8duqXz+R0hJhd8qKl
+      UJoEIJQmAQilSQBCaf8PAp7XPbg1RjoAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      gg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
